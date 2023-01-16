@@ -1,0 +1,33 @@
+html, body {
+    font-family: -apple-system,blinkmacsystemfont,segoe ui,roboto,oxygen-sans,ubuntu,cantarell,helvetica neue,"sans-serif";
+    color: $grey;
+    line-height: 1.25em;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 36px;
+    @media(min-width: $screen-sm-min) {
+        font-size: 54px;
+    }
+}
+
+h2 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $grey-light;
+  @media(min-width: $screen-sm-min) {
+    text-align: left;
+    font-size: 42px;
+}
+}
+
+p {
+    a {
+        color: $green-light;
+    }
+}
