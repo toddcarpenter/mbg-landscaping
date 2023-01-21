@@ -19,6 +19,17 @@
     display: flex;
     align-items: center;
   }
+
+  h2 {
+    &:after {
+      display: none;
+    }
+    border-bottom: none;
+      font-size: 36px;
+      @media(min-width: $screen-sm-min) {
+          font-size: 48px;
+      }
+  }
 }
 
 .hero, .hero .inner {
@@ -31,4 +42,7 @@
   color: white;
   padding: 20px 24px 28px;
   background: rgba(62, 62, 62, .65);
+  p {
+    font-size: 20px;
+  }
 }

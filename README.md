@@ -1,5 +1,11 @@
-# Outsourcify's HTML Starter with Webpack
-# https://outsourcify.net
+# MBG Landscaping
+# Using Outsourcify's HTML Starter with Webpack https://outsourcify.net
+
+Push to github repo (changed from master to main):
+
+```bash
+git push origin main
+```
 
 Install the dependencies:
 
