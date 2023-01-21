@@ -2,15 +2,36 @@
   overflow: hidden;
   background-position: center;
   background-size: center;
+  margin: 0 16px;
   img {
     width: 100%;
     height: auto;
   }
 }
 
-/*.slider-main__slide {
+.slick-track {
+  display: flex;
+  .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slick-slide {
+  img {
+    margin: auto;
+  }
+}
+
+.slider-nav {
+  margin-top: 16px;
+}
+
+.slider-main__slide {
   position: relative;
-}*/
+}
 
 .slider-main__decription {
   display: none;

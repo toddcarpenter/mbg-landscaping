@@ -33,7 +33,7 @@
             <div class="hero__copy">
                 <h2>Quality work for over 30 years</h2>
                 <p>Serving Scituate, MA & the surrounding South Shore area</p>
-                <div class="btn js-navigate" data-section="contact">Contact now for a free estimate!</div>
+                <div class="btn js-navigate" data-section="contact">Contact now for a free estimate<div>
             </div>
         </div>
     </section>
@@ -66,7 +66,7 @@
     </section>
 
     <section id="portfolio" class="portfolio inner">
-        <h2>Our Work</h2>
+        <h2>View Our Work</h2>
         <div class="slider-main">
             <div class="slider-main__slide">
                 <div>
@@ -138,6 +138,36 @@
         </div>
     </section>
 
+    <section class="member-quotes reviews">
+        <div class="member-quotes_inner">
+            <div class="wc__copy text-center">
+                <h2 class="wc__h2">What customers are saying
+                </h2>
+            </div>
+            <div class="member-quotes__slider">
+                <div class="member-quotes__quote">
+                    <img
+                            src="/images/quote.svg"
+                            alt="Open Quote Mark" class="member-quotes__open-quote">
+                    <p class="member-quotes__copy">The first thought that comes to mind when thinking of Mike Gilligan is integrity. Mike operates an exceptional landscaping business, he treats his customers how he would like to be treated. He has years of experience and is very creative in providing solutions for any exterior work. If you are looking for superior workmanship, outstanding communication, and exceptional service then I wouldn’t use anyone else.</p>
+                        <strong class="member-quotes__copy">- Ellen</strong>
+                </div>
+                <div class="member-quotes__quote">
+                    <img src="/images/quote.svg"
+                            alt="Open Quote Mark" class="member-quotes__open-quote">
+                        <p class="member-quotes__copy">We have used Michael Gilligan Landscaping for years. His services include design, construction, stone, plantings, lawns and maintenance. Michael is dependable and knowledgeable, we highly recommend his services.</p>
+                    <strong class="member-quotes__copy">- Skip & Mary Ann</strong>
+                </div>
+                <div class="member-quotes__quote">
+                    <img src="/images/quote.svg"
+                            alt="Open Quote Mark" class="member-quotes__open-quote">
+                    <p class="member-quotes__copy">Mike was wonderful to work with. Aside from the beautiful patio he created for us, he was incredibly responsive to all our questions and he was in constant communication with us throughout the project. He provided us with insight and options that were pragmatic and thoughtful, so that we could make the best choices for our house. We will highly recommend Mike to all our friends and family!</p>
+                        <strong class="member-quotes__copy">- Matt</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="inner">
             <h2>Contact</h2>
@@ -168,7 +198,7 @@
                 arrows: false,
                 fade: true,
                 asNavFor: '.slider-nav',
-                variableWidth: true
+                variableWidth: false
             });
 
             $('.slider-nav').slick({
@@ -179,6 +209,36 @@
                 centerMode: true,
                 focusOnSelect: true
             });
+
+            // only init slider for desktop 
+            var memSliderWinWidth = $(window).width(); 
+
+            function initMemberSlider() {   
+                var total = $('.member-quotes__quote').length, // get the number of slides
+            rand = Math.floor( Math.random() * total ); // random number
+
+                $('.member-quotes__slider').slick({     
+                    infinite: true,     
+                    dots: true,     
+                    slidesToShow: 1,     
+                    slidesToScroll: 1,     
+                    prevArrow: "<div class='member-quotes__prev-btn'><img class='member-quotes__prev-img slick-prev' src='/images/arrow-back.png'></div>",     
+                    nextArrow: "<div class='member-quotes__next-btn'><img class='member-quotes__next-img slick-next' src='/images/arrow.png'></div>"   
+                }).slick('slickGoTo', rand); //navigate to random slide
+            } 
+            
+            if (memSliderWinWidth >= 767) {   
+                initMemberSlider(); 
+            }
+
+            $(window).resize(function () {   
+                memSliderWinWidth = $(window).width();   
+                if (memSliderWinWidth <= 766) {     
+                $('.member-quotes__slider').slick('unslick');   
+                } else {     
+                initMemberSlider();   
+                } 
+            }); 
         });
     </script>
 </body>

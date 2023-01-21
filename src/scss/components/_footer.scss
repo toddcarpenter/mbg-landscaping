@@ -1,0 +1,21 @@
+.footer {
+  background-color: $green;
+  color: white;
+  padding: {
+    top: 32px;
+    bottom: 32px;
+  }
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    @media(min-width: 767px) {
+      flex-direction: row;
+      text-align: left;
+    }
+    a {
+      color: white;
+    }
+  }
+}

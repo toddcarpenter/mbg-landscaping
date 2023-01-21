@@ -24,6 +24,9 @@
     &:after {
       display: none;
     }
+    margin-top: 4px;
+    padding-bottom: 0px;
+    margin-bottom: -8px;
     border-bottom: none;
       font-size: 36px;
       @media(min-width: $screen-sm-min) {
@@ -40,8 +43,8 @@
   margin: auto;
   text-align: center;
   color: white;
-  padding: 20px 24px 28px;
-  background: rgba(62, 62, 62, .65);
+  padding: 34px 24px 46px;
+  background: rgba(62, 62, 62, .8);
   p {
     font-size: 20px;
   }

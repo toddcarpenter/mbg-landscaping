@@ -17,9 +17,9 @@ $green: #006600;
 $green-dark: #003300;
 $green-light: #158315;
 $green-kelly: #2a9f2a;
-$yellow: #ffbf00;
-$yellow-light: #ffd91a;
-$grey: #4d4d4d;
+$yellow: #f7bd00;
+$yellow-light: lighten($yellow, 10%);
+$grey: #424242;
 $grey-mid: #bdbdbd;
 $grey-light: #eee;
 
@@ -97,3 +97,6 @@ $screen-sm-max: 991px;
 $screen-md-min: 992px;
 
 $inner: 1300px;
+
+$mobile-breakpoint-min: 767px;
+$mobile-breakpoint-max: 766px;
