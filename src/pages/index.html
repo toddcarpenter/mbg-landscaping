@@ -33,7 +33,7 @@
             <div class="hero__copy">
                 <h2>Quality work for over 30 years</h2>
                 <p>Serving Scituate, MA & the surrounding South Shore area</p>
-                <div>Contact now for a free estimate!</div>
+                <div class="btn js-navigate" data-section="contact">Contact now for a free estimate!</div>
             </div>
         </div>
     </section>
@@ -49,18 +49,18 @@
         <div class="inner">
             <h2>Services</h2>
             <ul class="services__list">
-                <li class="services__item">Full landscape consultations</li>
-                <li class="services__item">Property Management</li>
-                <li class="services__item">Landscape design and installation</li>
-                <li class="services__item">Retaining walls</li>
-                <li class="services__item">Machine services</li>
-                <li class="services__item">Outdoor fireplaces and fire pits</li>
-                <li class="services__item">Tree and pruning work</li>
-                <li class="services__item">Walkways and patios</li>
-                <li class="services__item">Driveways</li>
-                <li class="services__item">Cobblestone aprons/edging</li>
-                <li class="services__item">Yard rehab/renovations</li>
-                <li class="services__item">Snow Removal</li>
+                <li class="services__item"><h3>Full landscape consultations</h3></li>
+                <li class="services__item"><h3>Property Management</h3></li>
+                <li class="services__item"><h3>Landscape design and installation</h3></li>
+                <li class="services__item"><h3>Retaining walls</h3></li>
+                <li class="services__item"><h3>Machine services</h3></li>
+                <li class="services__item"><h3>Outdoor fireplaces and fire pits</h3></li>
+                <li class="services__item"><h3>Tree and pruning work</h3></li>
+                <li class="services__item"><h3>Walkways and patios</h3></li>
+                <li class="services__item"><h3>Driveways</h3></li>
+                <li class="services__item"><h3>Cobblestone aprons/edging</h3></li>
+                <li class="services__item"><h3>Yard rehab/renovations</h3></li>
+                <li class="services__item"><h3>Snow Removal</h3></li>
             </ul>
         </div>
     </section>
@@ -139,7 +139,9 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
+        <div class="inner">
+            <h2>Contact</h2>
+        </div>
     </section>
 
     <%= require('html-loader!../blocks/footer.html') %>
@@ -153,7 +155,7 @@
 
     <script>
         $(function() {
-            $('header li').on('click', function() {
+            $('.js-navigate').on('click', function() {
                 const section = $(this).data('section');
                 const sectionAbout = document.getElementById(section);
 
