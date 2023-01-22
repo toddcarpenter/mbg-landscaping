@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 1;
   background-color: $green;
   color: white;
   padding: {
@@ -16,6 +18,16 @@
     }
     a {
       color: white;
+      text-decoration: none;
+      &:active, &:hover, &:focus {
+        text-decoration: underline;
+      }
     }
   }
+}
+
+.footer__copyright {
+  opacity: 0.6;
+  text-align: center;
+  padding: 8px;
 }

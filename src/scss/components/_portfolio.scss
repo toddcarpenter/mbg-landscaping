@@ -3,6 +3,14 @@
   background-position: center;
   background-size: center;
   margin: 0 16px;
+  @media(max-width: 767px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  @media(max-width: 500px) {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
   img {
     width: 100%;
     height: auto;
@@ -26,7 +34,8 @@
 }
 
 .slider-nav {
-  margin-top: 16px;
+  margin-top: 8px;
+  margin-bottom: 48px;
 }
 
 .slider-main__slide {

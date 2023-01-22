@@ -48,4 +48,14 @@
   p {
     font-size: 20px;
   }
+  .btn {
+    @media(max-width: 370px) {
+      text-transform: capitalize;
+    }
+    span {
+      @media(max-width: 370px) {
+        display: none;
+      }
+    }
+  }
 }
