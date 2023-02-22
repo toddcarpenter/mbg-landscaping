@@ -61,3 +61,21 @@
   z-index: 1;
   right: 24px;
 }
+
+.portfolio .slick-arrow {
+  background-color: rgba($grey, .6);
+  width: 40px;
+  height: 200px;
+  transition: background-color 0.2s ease-out;
+  &:hover, &:active, &:focus {
+    background-color: rgba($grey, .75);
+  }
+}
+
+.portfolio .slick-next {
+  right: 0;
+}
+
+.portfolio .slick-prev {
+  left: 0;
+}

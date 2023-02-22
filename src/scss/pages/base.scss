@@ -53,12 +53,15 @@ section {
 }
 
 section {
-    scroll-margin-top: 40px;
-    @media(max-width: $mobile-breakpoint-max) {
-        scroll-margin-top: 80px;
-    }
+    scroll-margin-top: 80px;
 }
 
-body, html {
-    overflow-x: hidden;
+.about__link {
+    cursor: pointer;
+    color: $green;
+    text-decoration: underline;
+    &:hover, &:active, &:focus {
+        color: $green-kelly;
+        text-decoration: underline;
+    }
 }
